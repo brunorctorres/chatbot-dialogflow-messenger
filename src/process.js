@@ -15,7 +15,7 @@ module.exports = (request) => {
             break;
 
         case intent.VERIFICA_PRODUTO:
-            response(message, template.textMessage(userId, 'Que legal isso!'));
+            response(message, template.textMessage(userId, 'Show, cara!'));
             break;
     }
 }
