@@ -1,0 +1,9 @@
+version: '3'
+services:
+  chatbot_troca_rapida:
+    build: ./
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/chatbot-troca-rapida
+    env_file: .env
