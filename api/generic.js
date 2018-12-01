@@ -2,7 +2,7 @@ const qs      = require('querystring');
 const request = require('request');
 const iconv   = require('iconv-lite');
 
-function send(path, dados, cb) {
+function send(path, dados, callback) {
 
     let data = qs.stringify(dados);
     
@@ -15,19 +15,20 @@ function send(path, dados, cb) {
     }
 
     request(options, (err, res, body) => {
+
         if (!err && res.statusCode == 200)
-            cb(iconv.decode(Buffer.from(body), 'ISO-8859-1')); // Returns UTF-8
+            callback(iconv.decode(Buffer.from(body), 'ISO-8859-1')); // Returns UTF-8
         else
-            cb(err);
+            callback(err);
     });
 }
 
 module.exports = {
 
-    getPosts: (cb) => {
+    getPosts: (callback) => {
 
         let dados = {}
 
-        send('posts', dados, res => cb(res));
+        send('posts', dados, res => callback(res));
     }
 }

@@ -2,20 +2,15 @@ const process = require('./process');
 
 module.exports = (req, res) => {
 
-    const sender = req.body.originalDetectIntentRequest.payload.data;
-    
-    if (sender) {
+    const payload = req.body.originalDetectIntentRequest.payload.data;
 
-        const slimRequest = {
-            action  : req.body.queryResult.action,
-            userId  : req.body.originalDetectIntentRequest.payload.data.sender.id,
-            message : req.body.originalDetectIntentRequest.payload.data.message.text
-        }
+    console.log('Request is coming...');
 
-        process(slimRequest);
-
-        res.status(200).end();
-    } else {
-        res.status(404).end();
+    if (payload) {
+        const action = req.body.queryResult.action;
+        const userId = req.body.originalDetectIntentRequest.payload.data.sender.id
+        process(action, userId);
     }
+
+    res.status(200).end();
 }

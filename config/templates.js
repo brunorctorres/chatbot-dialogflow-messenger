@@ -1,6 +1,6 @@
 module.exports = {
 
-    textMessage: (userId, text) => {
+    messageText: (userId, text) => {
 
         return responseObject = {
             headers: {'Content-Type': 'application/json'},
@@ -13,7 +13,7 @@ module.exports = {
         }
     },
 
-    textWithButtonsMessage: (userId) => {
+    messageTextButton: (userId) => {
 
         return responseObject = {
             headers: {'Content-Type': 'application/json'},
