@@ -13,6 +13,6 @@ module.exports = (action, userId) => {
             response(template.messageTextButton(userId));
             break;
         default:
-            response(template.messageText(userId, text.DESCULPA))
+            response(template.messageText(userId, text.DESCULPAS));
     }
 }
