@@ -1,7 +1,7 @@
 {
-  "name": "chatbot-troca-rapida",
+  "name": "chatbot-dialogflow-messenger",
   "version": "1.0.0",
-  "description": "Bemol - Chatbot Troca Rápida",
+  "description": "Dialogflow platform, messenger integration and nodejs",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,15 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/btowers/nodejs-dialogflow.git"
+    "url": "git+https://github.com/btowers/chatbot-dialogflow-messenger.git"
   },
-  "author": "Fast Penguins",
+  "author": "Bruno Torres",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/btowers/nodejs-dialogflow/issues"
+    "url": "https://github.com/btowers/chatbot-dialogflow-messenger/issues"
   },
-  "homepage": "https://github.com/btowers/nodejs-dialogflow#readme",
+  "homepage": "https://github.com/btowers/chatbot-dialogflow-messenger#readme",
   "dependencies": {
+    "callsap": "^1.0.0",
     "express": "^4.16.4",
     "node-fetch": "^2.3.0",
     "nodemon": "^1.18.7",
